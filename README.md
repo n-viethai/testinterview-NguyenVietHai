@@ -5,4 +5,7 @@ project gồm các phần :
 + Xóa, thêm , sửa bài post theo API của server.
 
 Em xin lỗi vì nộp bài chậm, vì thư viện react-router-dom bị gặp vấn đề, cũng như cách giải quyết tính huống của em còn hạn chế. 
+Mong anh thông cảm
+
+Em xin cảm ơn.
 
