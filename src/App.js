@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Router, Switch, Route } from "react-router";
+import Post from "./components/Post/Post.jsx";
+import Detail from "./components/Detail/Detail.jsx";
+import AddPost from "./components/AddPost/AddPost.jsx";
+
+import { createBrowserHistory } from "history";
+import EditPost from "./components/EditPost/EditPost.jsx";
+export const history = createBrowserHistory();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router history={history}>
+      <Switch>
+        <Route exact path="/" component={Post} />
+        <Route exact path="/post/detail/:id" component={Detail} />
+        <Route exact path="/post/addpost" component={AddPost} />
+        <Route exact path="/post/edit/:id" component={EditPost} />
+      </Switch>
+    </Router>
   );
 }
 
